@@ -1,0 +1,26 @@
+#!/bin/bash
+
+touch bootstrap.lock
+# FIXME it gets, and rpmdb rebuild seems to work
+# error: db5 error(-30969) from dbenv->open: 
+# BDB0091 DB_VERSION_MISMATCH: Database environment version mismatch
+rpmdb --rebuilddb
+
+# Update and upgrade repo
+dnf update -y
+dnf upgrade -y
+
+dnf install jdk-21-headless -y
+dnf install sqlcl -y
+
+# wget -O /home/opc/sqlplus_config.tar.gz.base64 "${sqlplus_config_par_full_path}"
+# base64 -d /home/opc/sqlplus_config.tar.gz.base64 > /home/opc/sqlplus_config.tar.gz && \
+#     rm /home/opc/sqlplus_config.tar.gz.base64
+
+# Extract sqlplus_config
+# tar xzf /home/opc/sqlplus_config.tar.gz -C /home/opc && \
+#     rm /home/opc/sqlplus_config.tar.gz
+
+# chown -R opc:opc /home/opc/sqlplus_config
+
+rm bootstrap.lock

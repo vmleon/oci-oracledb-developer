@@ -1,0 +1,12 @@
+.env.json
+
+node_modules
+
+generated
+*.tfvars
+*.tfvars.json
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+
+.DS_Store
