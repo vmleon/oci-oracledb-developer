@@ -6,6 +6,9 @@ A playground for Oracle Cloud Infrastructure with Oracle Database for Developers
 
 This project will deploy an **Autonomous Database** Shared and a **compute instance** with `sqlcl` installed on Oracle Cloud Infrastructure.
 
+[SQLcl FAQ](https://www.oracle.com/database/technologies/appdev/sqlcl/sqlcl-faq.html)
+[SQLcl Docs](https://docs.oracle.com/en/database/oracle/sql-developer-command-line/)
+
 ## Deploy infrastructure
 
 ```bash
